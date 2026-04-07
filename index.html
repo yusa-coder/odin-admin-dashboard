@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+      <symbol id="i-dashboard" viewBox="0 0 24 24">
+        <path
+          d="M3 13h8V3H3v10Zm0 8h8v-6H3v6Zm10 0h8V11h-8v10Zm0-18v6h8V3h-8Z"
+        />
+      </symbol>
+      <symbol id="i-home" viewBox="0 0 24 24">
+        <path d="M12 3 3 10v11h6v-7h6v7h6V10l-9-7Z" />
+      </symbol>
+      <symbol id="i-user" viewBox="0 0 24 24">
+        <path
+          d="M12 12a4.5 4.5 0 1 0-4.5-4.5A4.5 4.5 0 0 0 12 12Zm0 2c-4.4 0-8 2.2-8 5v2h16v-2c0-2.8-3.6-5-8-5Z"
+        />
+      </symbol>
+      <symbol id="i-message" viewBox="0 0 24 24">
+        <path d="M4 4h16v12H7l-3 3V4Z" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <path
+          d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 11h-6V11h4V6h2v7Z"
+        />
+      </symbol>
+      <symbol id="i-check" viewBox="0 0 24 24">
+        <path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z" />
+      </symbol>
+      <symbol id="i-users" viewBox="0 0 24 24">
+        <path
+          d="M16 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4ZM8 11a3 3 0 1 0-3-3 3 3 0 0 0 3 3Zm0 2c-2.7 0-8 1.3-8 4v3h10v-3c0-1.1.6-2.1 1.6-2.9A9 9 0 0 0 8 13Zm8 0c-2.1 0-6.3.8-6.3 3.1V20H24v-3c0-2.8-5.3-4-8-4Z"
+        />
+      </symbol>
+      <symbol id="i-cog" viewBox="0 0 24 24">
+        <path
+          d="M19.4 13a7.7 7.7 0 0 0 .1-1 7.7 7.7 0 0 0-.1-1l2.1-1.6-2-3.4-2.5 1a8 8 0 0 0-1.7-1l-.4-2.7H9.1L8.7 6a8 8 0 0 0-1.7 1l-2.5-1-2 3.4L4.6 11a7.7 7.7 0 0 0-.1 1 7.7 7.7 0 0 0 .1 1L2.5 14.6l2 3.4 2.5-1a8 8 0 0 0 1.7 1l.4 2.7h5.8l.4-2.7a8 8 0 0 0 1.7-1l2.5 1 2-3.4L19.4 13ZM12 15.5A3.5 3.5 0 1 1 15.5 12 3.5 3.5 0 0 1 12 15.5Z"
+        />
+      </symbol>
+      <symbol id="i-help" viewBox="0 0 24 24">
+        <path
+          d="M11 18h2v2h-2v-2Zm1-16A10 10 0 1 0 22 12 10 10 0 0 0 12 2Zm.2 15h-1.9c0-3 3-3.6 3-5.6 0-1.1-.9-1.9-2.1-1.9a2.2 2.2 0 0 0-2.2 2H7a4.2 4.2 0 0 1 4.4-4 4 4 0 0 1 4.3 3.9c0 3-3.2 3.6-3.5 5.6Z"
+        />
+      </symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24">
+        <path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Z" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <path
+          d="M10 2a8 8 0 1 0 5.3 14l4.9 4.9 1.4-1.4-4.9-4.9A8 8 0 0 0 10 2Zm0 2a6 6 0 1 1-6 6 6 6 0 0 1 6-6Z"
+        />
+      </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path
+          d="M12 22a2.5 2.5 0 0 0 2.5-2.5h-5A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5-6.7V3a2 2 0 1 0-4 0v1.3A7 7 0 0 0 5 11v5L3 18v1h18v-1l-2-2Z"
+        />
+      </symbol>
+      <symbol id="i-star" viewBox="0 0 24 24">
+        <path
+          d="M12 17.3 18.2 21l-1.7-7.2L22 9l-7.3-.6L12 2 9.3 8.4 2 9l5.5 4.8L5.8 21 12 17.3Z"
+        />
+      </symbol>
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path
+          d="M12 5c-5.5 0-9.9 4-11 7 1.1 3 5.5 7 11 7s9.9-4 11-7c-1.1-3-5.5-7-11-7Zm0 12a5 5 0 1 1 5-5 5 5 0 0 1-5 5Z"
+        />
+      </symbol>
+      <symbol id="i-share" viewBox="0 0 24 24">
+        <path
+          d="M18 16a3 3 0 0 0-2.4 1.2L8.9 13.7a3.2 3.2 0 0 0 0-3.4l6.7-3.5A3 3 0 1 0 15 5a2.9 2.9 0 0 0 .1.8L8.4 9.3a3 3 0 1 0 0 5.4l6.7 3.5A3 3 0 1 0 18 16Z"
+        />
+      </symbol>
+    </svg>
+    <!--
+      Project prompt notes (does NOT affect design):
+
+      Step 2: Layout
+      - Write HTML for sidebar, header, main-content containers
+      - Use CSS Grid to create the basic layout
+
+      Step 3: Nesting
+      - Nest child elements under parents, using grids within grids
+      - Sidebar: grids for branding + navigation
+      - Header: grids for search bar, user info, buttons
+      - Main: grids for projects, announcements, trending
+      - Use dummy content and placeholder images to position items
+
+      Step 4: Gather assets
+      - Icons can be downloaded as SVGs from Material Design Icons
+      - Choose your own fonts (example uses Roboto via Google Fonts)
+
+      Step 5: Tips
+      - Temporarily add backgrounds/borders to visualize grids
+      - Use px, fr, or both
+      - Doesn’t need to be responsive
+      - Pixel-perfect not required; focus on CSS practice
+    -->
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Sidebar">
+        <div class="sidebar-brand">
+          <svg class="mdi mdi-lg" aria-hidden="true"><use href="#i-dashboard"></use></svg>
+          <span class="brand-text">Dashboard</span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Primary">
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-home"></use></svg>Home
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-user"></use></svg>Profile
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-message"></use></svg>Messages
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-clock"></use></svg>History
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-check"></use></svg>Tasks
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-users"></use></svg>Communities
+          </a>
+        </nav>
+
+        <nav class="sidebar-nav sidebar-nav-secondary" aria-label="Secondary">
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-cog"></use></svg>Settings
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-help"></use></svg>Support
+          </a>
+          <a class="nav-item" href="#">
+            <svg class="mdi" aria-hidden="true"><use href="#i-shield"></use></svg>Privacy
+          </a>
+        </nav>
+      </aside>
+
+      <header class="header" aria-label="Header">
+        <div class="header-top">
+          <label class="search" aria-label="Search">
+            <svg class="mdi" aria-hidden="true"><use href="#i-search"></use></svg>
+            <input class="search-input" type="search" placeholder="" />
+          </label>
+
+          <div class="user-mini">
+            <svg class="mdi" aria-hidden="true"><use href="#i-bell"></use></svg>
+            <span class="avatar avatar-sm" aria-hidden="true"></span>
+            <span class="user-name">Morgan Oakley</span>
+          </div>
+        </div>
+
+        <div class="header-bottom">
+          <div class="user-big">
+            <span class="avatar avatar-lg" aria-hidden="true"></span>
+            <div class="user-big-text">
+              <div class="greeting">Hi there,</div>
+              <div class="handle">Morgan Oakley <span class="muted">(@morgan)</span></div>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn" type="button">New</button>
+            <button class="btn" type="button">Upload</button>
+            <button class="btn" type="button">Share</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main" aria-label="Main content">
+        <section class="projects" aria-label="Projects">
+          <h2 class="section-title">Your Projects</h2>
+
+          <div class="project-grid">
+            <article class="card project-card">
+              <h3 class="card-title">Super Cool Project</h3>
+              <p class="card-text">
+                Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id
+                facilisis felis accumsan nec.
+              </p>
+              <div class="card-actions" aria-label="Project actions">
+                <button class="icon-btn" type="button" aria-label="Favorite">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-star"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Watch">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Share">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-share"></use></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3 class="card-title">Less Cool Project</h3>
+              <p class="card-text">
+                Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor
+                tincidunt, consectetur sapien et, facilisis dolor.
+              </p>
+              <div class="card-actions" aria-label="Project actions">
+                <button class="icon-btn" type="button" aria-label="Favorite">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-star"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Watch">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Share">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-share"></use></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3 class="card-title">Impossible App</h3>
+              <p class="card-text">
+                In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat
+                velit sagittis id.
+              </p>
+              <div class="card-actions" aria-label="Project actions">
+                <button class="icon-btn" type="button" aria-label="Favorite">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-star"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Watch">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Share">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-share"></use></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3 class="card-title">Easy Peasy App</h3>
+              <p class="card-text">
+                Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget
+                accumsan aliquam. Curabitur dignissim nisi in tortor commodo.
+              </p>
+              <div class="card-actions" aria-label="Project actions">
+                <button class="icon-btn" type="button" aria-label="Favorite">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-star"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Watch">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Share">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-share"></use></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3 class="card-title">Ad Blocker</h3>
+              <p class="card-text">
+                Quisque eget rutrum nisl. Nam augue justo, cursus vitae metus vel,
+                pharetra hendrerit felis. Aliquam sed malesuada eros.
+              </p>
+              <div class="card-actions" aria-label="Project actions">
+                <button class="icon-btn" type="button" aria-label="Favorite">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-star"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Watch">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Share">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-share"></use></svg>
+                </button>
+              </div>
+            </article>
+
+            <article class="card project-card">
+              <h3 class="card-title">Money Maker</h3>
+              <p class="card-text">
+                Praesent convallis, libero quis congue elementum, nunc ante faucibus
+                sapien, ac scelerisque tortor purus sit amet ex.
+              </p>
+              <div class="card-actions" aria-label="Project actions">
+                <button class="icon-btn" type="button" aria-label="Favorite">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-star"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Watch">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-eye"></use></svg>
+                </button>
+                <button class="icon-btn" type="button" aria-label="Share">
+                  <svg class="mdi" aria-hidden="true"><use href="#i-share"></use></svg>
+                </button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="right" aria-label="Right sidebar">
+          <section class="announcements" aria-label="Announcements">
+            <h2 class="section-title">Announcements</h2>
+            <div class="card stack">
+              <div class="stack-item">
+                <h3 class="stack-title">Site Maintenance</h3>
+                <p class="stack-text">
+                  Vestibulum condimentum tellus lacus, in accumsan elit maximus ac. Donec
+                  hendrerit sodales congue...
+                </p>
+              </div>
+              <div class="divider" aria-hidden="true"></div>
+              <div class="stack-item">
+                <h3 class="stack-title">Community Share Day</h3>
+                <p class="stack-text">
+                  Nam vel lectus tincidunt, rutrum nulla eu, ornare libero. Aliquam dictum
+                  accumsan porttitor...
+                </p>
+              </div>
+              <div class="divider" aria-hidden="true"></div>
+              <div class="stack-item">
+                <h3 class="stack-title">Updated Privacy Policy</h3>
+                <p class="stack-text">
+                  Phasellus efficitur nisi eget elit consectetur, eget condimentum ante
+                  auctor. Cras fringilla sagittis sem in mattis...
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="trending" aria-label="Trending">
+            <h2 class="section-title">Trending</h2>
+            <div class="card trending-list">
+              <div class="trend">
+                <span class="avatar avatar-xs avatar-a" aria-hidden="true"></span>
+                <div>
+                  <div class="trend-handle">@tegan</div>
+                  <div class="trend-sub">World Peace Builder</div>
+                </div>
+              </div>
+              <div class="trend">
+                <span class="avatar avatar-xs avatar-b" aria-hidden="true"></span>
+                <div>
+                  <div class="trend-handle">@morgan</div>
+                  <div class="trend-sub">Super Cool Project</div>
+                </div>
+              </div>
+              <div class="trend">
+                <span class="avatar avatar-xs avatar-c" aria-hidden="true"></span>
+                <div>
+                  <div class="trend-handle">@kendall</div>
+                  <div class="trend-sub">Life Changing App</div>
+                </div>
+              </div>
+              <div class="trend">
+                <span class="avatar avatar-xs avatar-d" aria-hidden="true"></span>
+                <div>
+                  <div class="trend-handle">@alex</div>
+                  <div class="trend-sub">No Traffic Maker</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>
